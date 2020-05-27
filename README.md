@@ -1,1 +1,1 @@
-# burgerLogger
+# burgerLogger full stack app
