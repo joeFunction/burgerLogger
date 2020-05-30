@@ -3,7 +3,7 @@ $(function () {
     $(".eat").on("click", function (event) {
       event.preventDefault()
       var id = $(this).data("id");
-  console.log("eat clickedL ", id)
+  console.log("eat clicked ", id)
   
       var update = {
         devoured: 1

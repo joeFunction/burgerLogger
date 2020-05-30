@@ -1,8 +1,8 @@
-<h1>Cats!</h1>
+<h1>Burgers!</h1>
 
 <div class="row">
   <div class="col-6">
-    <h2>Cats that are not sleepy!</h2>
+    <h2>Your Plate...</h2>
 
     <ul>
       {{#each burger}}
@@ -10,7 +10,7 @@
       <li>
         {{burger_name}}
 
-        <button class="eat" data-id="{{id}}">EAT!</button>
+        <button class="eat" data-id="{{id}}">EAT</button>
       </li>
 
       {{/unless}}
@@ -18,7 +18,7 @@
     </ul>
   </div>
   <div class="col-6">
-  <h2>Cats that are sleepy!</h2>
+  <h2>Empty Plate...</h2>
 
   <ul>
     {{#each burger}}
@@ -33,7 +33,7 @@
   </ul>
 </div>
 </div>
-<h2>Add a Cat</h2>
+<h2>Add a Burger...</h2>
 <form class="create-form">
 
   <div class="form-group">
@@ -41,5 +41,5 @@
     <input type="text" id="burger" name="name">
   </div>
 
-  <button id="add">Add Burger</button>
+  <button id="add">Add</button>
 </form>
