@@ -1,4 +1,4 @@
-<h1>Menu</h1>
+<h1>Restaurant</h1>
 
 <div class="row">
   <div class="col-6">
@@ -8,28 +8,55 @@
       {{#each burger}}
       {{#unless devoured}}
       <li>
-        {{burger_name}}
+        <h3>Table Number {{burger_name}}</h3>
+        <h4>Food</h4>
+        <button class="eat" data-id="{{id}}">Add</button>
+        <button class="eat" data-id="{{id}}">Delete</button>
+        <h4>Drinks</h4>
+        <button class="eat" data-id="{{id}}">Add</button>
+        <button class="eat" data-id="{{id}}">Delete</button>
+        <h4>Checkout</h4>
         <button class="eat" data-id="{{id}}">Checkout</button>
-      </li>
+      
+      <form class="create-form">
 
+  <div class="form-group">
+    <label for="ca">Table Number:</label>
+    <input type="text" id="burger" name="name">
+  </div>
+  <button id="add">Add</button>
+</form>
       {{/unless}}
       {{/each}}
     </ul>
+    </li>
   </div>
-  <div class="col-6">
-    <h2>Closed Table area...</h2>
 
+
+  <div class="col-6">
+    <h2>Closed Table Area...</h2>
     <ul>
       {{#each burger}}
       {{#if devoured}}
       <li>
         {{burger_name}}
+        <h3>Closed</h2>
+        <ul>
+          {{#each burger}}
+          {{#if devoured}}
+          <li>
+            {{burger_name}}
+          </li>
+          {{/if}}
+          {{/each}}
+        </ul>
       </li>
       {{/if}}
       {{/each}}
     </ul>
   </div>
 </div>
+
 <form class="create-form">
 
   <div class="form-group">
@@ -39,11 +66,4 @@
   <button id="add">Add</button>
 </form>
 
-<div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-  <div class="card-header">Table ID goes here</div>
-  <div class="card-body">
-    <h5 class="card-title">Burgers</h5><button id="000">Add</button>
-    <h5 class="card-title">Drinks</h5><button id="000">Add</button>
-  </div>
 
-  <button id="000">Checkout</button>

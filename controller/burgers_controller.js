@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const burger = require("../models/burger.js");
 
-// Create all our routes and set up logic within those routes where required.
+// Create all our routes and set up logic within those routes where required. ////////////////
 router.get("/", async (req, res) => {
   const data = await burger.all();
 
