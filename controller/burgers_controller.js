@@ -16,7 +16,7 @@ router.post("/api/burger", async (req, res) => {
 });
 
 router.put("/api/burger/:id", async (req, res) => {
-  let condition = `id = ${req.params.id}`;
+  let condition = `id' = ${req.params.id}`;
 
   console.log("condition", condition,);
 

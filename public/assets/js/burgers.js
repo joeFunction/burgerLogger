@@ -5,11 +5,11 @@ $(function () {
       var id = $(this).data("id");
   console.log("eat clicked ", id)
   
-      var update = {
-        devoured: 1
+      var update = { 
+        devoured: 1 //target text field, new value of update
       };
   
-      // Send the PUT request.
+      // Send the PUT request. 
       $.ajax("/api/burger/" + id, {
         type: "PUT",
         data: update
